@@ -31,7 +31,8 @@ namespace DevJobs.API.Controllers
                 id
             );
 
-            jobVacancy.Applications.Add(application);
+            _context.JobApplications.Add(application);
+            _context.SaveChanges();
             
             return NoContent();
         }
