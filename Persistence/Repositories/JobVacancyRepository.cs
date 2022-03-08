@@ -6,6 +6,7 @@ namespace DevJobs.API.Persistence.Repositories
     public class JobVacancyRepository : IJobVacancyRepository
     {
         private readonly DevJobsContext _context;
+
         public JobVacancyRepository(DevJobsContext context)
         {
             _context = context;

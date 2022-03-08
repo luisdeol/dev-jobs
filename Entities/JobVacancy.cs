@@ -15,7 +15,7 @@ namespace DevJobs.API.Entities
         }
 
         public int Id { get; private set; }
-        public string Title { get; private set; } 
+        public string Title { get; private set; }
         public string Description { get; private set; }
         public string Company { get; private set; }
         public bool IsRemote { get; private set; }
@@ -23,7 +23,8 @@ namespace DevJobs.API.Entities
         public DateTime CreatedAt { get; private set; }
         public List<JobApplication> Applications { get; private set; }
 
-        public void Update(string title, string description) {
+        public void Update(string title, string description)
+        {
             Title = title;
             Description = description;
         }
