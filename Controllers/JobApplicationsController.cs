@@ -16,8 +16,15 @@ namespace DevJobs.API.Controllers
             _context = context;
         }
 
-        // POST api/job-vacancies/4/applications
+        // POST api/job-vacancies/{id}/applications
+        /// <summary>
+        /// Listagem de Candidatos
+        /// </summary>
+        /// <param name="id">ID da Vaga</param>
+        /// <returns>Lista de Candidatos</returns>
+        /// <response code="200">Sucesso</response>
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult Post(int id, AddJobApplicationInputModel model)
         {
             var jobVacancy = _context.JobVacancies
